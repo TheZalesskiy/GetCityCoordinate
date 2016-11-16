@@ -1,6 +1,5 @@
 package getCity.Impl;
 
-
 import org.json.JSONException;
 import java.io.IOException;
 

@@ -3,10 +3,9 @@ package getCity.Impl;
 import getCity.JsonReader;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.IOException;
 
-
+/**Service get google coordinate for city */
 public  class GoogleCoordinatesProviderImpl implements CoordinatesProvider {
     public final String URL_BASE = "https://maps.googleapis.com/maps/api/geocode/json?sensor=false&address=";
 
@@ -20,9 +19,9 @@ public  class GoogleCoordinatesProviderImpl implements CoordinatesProvider {
         location = location.getJSONObject("geometry");
         location = location.getJSONObject("location");
         // longitude
-        final double lng = location.getDouble("lng");
+        double lng = location.getDouble("lng");
         // latitude
-        final double lat = location.getDouble("lat");
+        double lat = location.getDouble("lat");
         // final latitude and longitude
         System.out.println(String.format("%s", location));
 

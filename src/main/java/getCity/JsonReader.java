@@ -8,7 +8,7 @@ import java.net.URL;
 import java.nio.charset.Charset;
 
 /**
- * To contact the web services and response in json
+ * To contact the web services and response in JSON
  */
 public class JsonReader {
     private static String readAll(final Reader rd) throws IOException {

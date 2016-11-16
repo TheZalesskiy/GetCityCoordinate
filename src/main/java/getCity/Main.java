@@ -13,8 +13,8 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws IOException, JSONException {
-         CityProvider cityProvider = new FileCityProviderImpl();
-         CoordinatesProvider coordinatesProvider = new GoogleCoordinatesProviderImpl();
+        CityProvider cityProvider = new FileCityProviderImpl();
+        CoordinatesProvider coordinatesProvider = new GoogleCoordinatesProviderImpl();
 
         // fetch city_list list from file
         List<String> cityList = cityProvider.getCityList("src/main/resources/city_list");
