@@ -12,7 +12,7 @@ import java.nio.charset.Charset;
  */
 public class JsonReader {
     private static String readAll(final Reader rd) throws IOException {
-        final StringBuilder stringBuilder = new StringBuilder();
+        StringBuilder stringBuilder = new StringBuilder();
         int i;
         while ((i = rd.read()) != -1) {
             stringBuilder.append((char) i);
@@ -21,12 +21,12 @@ public class JsonReader {
     }
 
     public static JSONObject read(final String url) throws IOException, JSONException {
-        final InputStream inputStream = new URL(url).openStream();
+        InputStream inputStream = new URL(url).openStream();
         try {
-            final BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream,
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream,
                     Charset.forName("UTF-8")));
-            final String jsonText = readAll(reader);
-            final JSONObject json = new JSONObject(jsonText);
+            String jsonText = readAll(reader);
+            JSONObject json = new JSONObject(jsonText);
             return json;
         } finally {
             inputStream.close();
